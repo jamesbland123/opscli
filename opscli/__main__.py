@@ -1,7 +1,9 @@
-from .account import get_account
+from .command import Command
+import sys
 
 def main():
-    print(get_account())
+    args = sys.argv[1:]
+    Command(args)
 
 if __name__ == "__main__":
     main()
