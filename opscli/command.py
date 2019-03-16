@@ -2,6 +2,7 @@
 import argparse
 import sys
 import importlib
+import pprint
 
 class Command():
     """
@@ -27,7 +28,7 @@ class Command():
 
         if args.command:
             result = getattr(self, args.command)()
-            print(result)
+            pprint.pprint(result)
 
     def get(self):
         """
